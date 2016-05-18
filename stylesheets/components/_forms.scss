@@ -1,0 +1,61 @@
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  @include font-size(16px);
+  box-shadow: none;
+  border: 2px solid $border-form-color;
+  border-radius: 0;
+  display: inline-block;
+  height: $height-input + ($border-input * 2);
+  line-height: 1.3em;
+  outline: none;
+  padding: 12px 6px 12px 14px;
+  vertical-align: middle;
+  width: 100%;
+
+  &:focus {
+    border-color: darken($border-form-color, 3%);
+    box-shadow: none;
+    font-weight: normal;
+    outline: 0;
+  }
+
+  // Removes Chrome default yellow background on inputs
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+  }
+}
+
+select {
+  @include appearance(none);
+  background: {
+    color: #fff;
+    image: image-url("component/forms/select-arrow.png");
+    position: 93% center;
+    repeat: no-repeat;
+  }
+  padding-right: 50px;
+}
+
+label {
+  font-size: 16px;
+}
+
+textarea {
+  &::placeholder {
+    font-style: italic;
+  }
+}

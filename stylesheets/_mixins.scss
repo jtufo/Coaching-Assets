@@ -1,0 +1,16 @@
+// Convert px to rem
+@function rem($size) {
+  $remSize: $size / $font-size-base;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}
+
+// Appearence
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+}

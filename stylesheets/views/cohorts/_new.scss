@@ -1,0 +1,46 @@
+form#new_cohort {
+  #cohort-conditions {
+    .field_with_errors {
+      display: inline;
+    }
+
+    .form-group {
+      span[data-condition] {
+        display: none;
+      }
+
+      select,
+      input[id^="cohort_conditions_attributes"] {
+        margin-right: 1%;
+        min-width: 10% !important;
+        width: 26%;
+      }
+    }
+  }
+
+  .cohert-condition-property,
+  .destroy-condition {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .cohert-condition-property {
+    width: 94%;
+  }
+
+  .destroy-condition {
+    width: 5%;
+  }
+
+  #cohort-conditions-add {
+    font-style: italic;
+    margin-left: 22px;
+    text-decoration: underline;
+  }
+
+  a.destroy {
+    color: $color-green;
+    font-size: 24px;
+  }
+}
+

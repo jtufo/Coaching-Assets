@@ -1,0 +1,12 @@
+#cohort-results {
+  .cohort-results-header {
+    color: $color-blue;
+    margin: -50px 0 40px;
+    padding: 0 67px;
+  }
+}
+
+select[id="cohort"] {
+  min-width: 240px;
+  width: auto;
+}

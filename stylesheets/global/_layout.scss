@@ -1,0 +1,32 @@
+.page-container {
+  padding-bottom: 80px;
+}
+
+.outer-wrapper {
+  background: #ffffff;
+  box-shadow: 0 5px 2px -3px rgba(151, 156, 157, 0.1);
+  padding: $section-padding 0;
+  width: 100%;
+}
+
+.or {
+  @include font-size(14px);
+  display: inline-block;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+.iris-eye {
+  background: image-url("iris-logo-gray.png") no-repeat top center;
+  color: #cfd7d9;
+  font: {
+    family: $secondary-font-family;
+    weight: 700;
+  }
+  margin: 70px 0;
+  padding-top: 68px;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+}

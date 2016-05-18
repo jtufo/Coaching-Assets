@@ -1,0 +1,76 @@
+.Nav-custom {
+  $box-shadow: inset 0px -4px 0px 0px $color-green;
+  background: #ffffff;
+  border-color: #e5e5e5;
+  font: {
+    family: $base-font-family;
+    size: 14px;
+    weight: 500;
+  }
+  margin: 0;
+  text-transform: uppercase;
+
+  &.iris-logo {
+    background: {
+      image: image-url("iris-logo.png");
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+
+  a.Nav-custom-brand {
+    background: $color-blue;
+    border-bottom: 3px solid $color-blue;
+    color: #ffffff;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 15px 25px 12px;
+
+    &:hover {
+      background: $color-blue;
+      color: #ffffff;
+    }
+  }
+
+  .Nav-list-primary {
+    > li {
+      &.active {
+        > a {
+          background: none;
+          box-shadow: $box-shadow;
+        }
+      }
+
+      > a {
+        color: #444444;
+        margin: 0 12px;
+        padding: 15px 12px;
+        transition: 0.3s;
+
+        &:hover {
+          background: none;
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+  }
+
+  .Nav-list-secondary {
+    > li {
+      margin-right: -15px;
+
+      > a {
+        background: $color-gray;
+        color: $color-blue;
+        padding: {
+          left: 33px;
+          right: 33px;
+        }
+
+        &:hover {
+          background: $color-gray;
+        }
+      }
+    }
+  }
+}

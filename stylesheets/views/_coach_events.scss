@@ -1,0 +1,10 @@
+body.coach_events {
+  form#log-filter {
+    select,
+    textarea,
+    input {
+      width: auto;
+      max-width: 20%;
+    }
+  }
+}

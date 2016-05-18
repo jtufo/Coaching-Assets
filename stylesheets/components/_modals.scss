@@ -1,0 +1,56 @@
+#reveal-modal.modal {
+  .modal-dialog {
+    background: #ffffff;
+    bottom: -100%;
+    box-shadow: 0 -6px 13px 0 rgba(0, 0, 0, 0.3);
+    left: 0;
+    margin: auto;
+    max-height: 50%;
+    overflow: auto;
+    padding: 20px;
+    position: fixed;
+    transition: bottom 0.7s cubic-bezier(0.17, 0.04, 0.03, 0.94) 0.3s;
+    transform: none;
+    width: 100%;
+    z-index: $zindex-modal;
+  }
+
+  &.in {
+    .modal-dialog {
+      bottom: 0;
+    }
+  }
+}
+
+#reveal-modal-spacer {
+  transition: height 0.5s;
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-header {
+  border: 0;
+
+  .modal-title {
+    @include font-size(24px);
+  }
+
+  .close {
+    font-size: 27px;
+    margin-top: 6px;
+  }
+}
+
+.modal-body {
+  input[type="submit"] {
+    margin-top: 30px;
+  }
+}
+
+body.modal-open {
+  overflow: auto;
+}

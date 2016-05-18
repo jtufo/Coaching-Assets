@@ -1,0 +1,54 @@
+.tabs-container {
+  input[type="radio"],
+  .tab-content {
+    display: none;
+  }
+
+  input[type="radio"]:checked {
+    + .tabs-label {
+      background: #ffffff;
+      border: $profile-border solid $color-gray;
+      border-bottom-color: #ffffff;
+
+      span {
+        border-bottom: 4px solid $color-gray;
+        padding: 0 14px 14px;
+      }
+    }
+  }
+
+  .tab-content {
+    border: $profile-border solid $color-gray;
+    border-bottom: none;
+    padding: 45px 6% 75px;;
+  }
+
+  .tabs-label {
+    @include font-size(20px);
+    margin: 0 -4px -3px 0; // -4px Removes inline-block space
+    padding: 18px 0;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    width: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      @include font-size(16px);
+      font: {
+        family: $secondary-font-family;
+        weight: 700;
+      }
+    }
+  }
+
+  @for $i from 1 through 2 {
+    input[type="radio"]:checked:nth-of-type(#{$i}) ~ .tab-content:nth-of-type(#{$i}) {
+      display: block;
+    }
+  }
+}

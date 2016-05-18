@@ -1,0 +1,105 @@
+html {
+  font-size: $font-size-base;
+
+  @media only screen and (max-width: $screen-md-min) {
+    font-size: $font-size-base;
+  }
+
+  @media only screen and (max-width: $screen-sm-min) {
+    font-size: $font-size-base - 2;
+  }
+
+  @media only screen and (max-width: $screen-xs-min) {
+    font-size: $font-size-base - 4;
+  }
+}
+
+body {
+  color: $color-text-default;
+  font: {
+    family: $base-font-family;
+    size: inherit;
+  }
+  line-height: $line-height;
+}
+
+// Links
+a {
+  @include font-size(15px);
+  color: $color-green;
+
+  &.link-upper {
+    text-transform: uppercase;
+  }
+
+  &.link-arrow {
+    position: relative;
+
+    &::before {
+      content: "»";
+      left: -14px;
+      position: absolute;
+    }
+  }
+
+  &.link-contact-again {
+    color: $color-blue;
+  }
+
+  &:hover {
+    color: darken($color-green, 3%);
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-green;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-blue;
+  font: {
+    family: $secondary-font-family;
+    weight: 400;
+  }
+  line-height: $line-height;
+  margin: 0;
+
+  > i {
+    margin-right: 10px;
+  }
+}
+
+h1 {
+  @include font-size(36px);
+}
+
+h2 {
+  @include font-size(30px);
+}
+
+h3 {
+  @include font-size(24px);
+}
+
+h4 {
+  @include font-size(18px);
+}
+
+h5 {
+  @include font-size(16px);
+}
+
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+.h4 { @extend h4; }
+.h5 { @extend h5; }

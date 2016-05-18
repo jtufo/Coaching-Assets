@@ -1,0 +1,44 @@
+.panel {
+  border: 2px solid transparent;
+
+  .panel-heading,
+  .panel-footer {
+    padding: 25px 30px;
+  }
+
+  .date,
+  .time {
+    @include font-size(15px);
+    color: #a3a8ae;
+    font-style: italic;
+  }
+}
+
+// Default Panel
+.panel--default {
+  border-color: $color-gray;
+
+  .panel-heading {
+    border-bottom: 1px solid $color-gray;
+  }
+}
+
+// Primary Panel
+.panel--primary {
+  .panel-heading {
+    background: $color-gray;
+  }
+
+  .panel-title {
+    color: $color-gray-med;
+  }
+}
+
+// Secondary Panel
+.panel--secondary {
+  border-color: none;
+
+  .panel-title {
+    color: $color-gray-med;
+  }
+}

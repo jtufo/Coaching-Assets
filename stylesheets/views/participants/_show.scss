@@ -1,0 +1,110 @@
+body.participants.show {
+  .participant-profile {
+    padding-bottom: 0;
+  }
+
+  .deactivated {
+    text-align: center;
+    font: {
+      size: 18px;
+      style: italic;
+    }
+    margin-bottom: 50px;
+  }
+
+  // Profile Details Section
+  .profile-details {
+    .profile-icon {
+      border: 17px solid $color-gray-light;
+      border-radius: 50%;
+      width: 100%;
+
+      img {
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 5px white;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    .current-cohorts {
+      color: $color-blue;
+      font-size: 13px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .cohorts-list {
+      border: $profile-border solid $color-gray-light;
+      font: {
+        size: 14px;
+        weight: 500;
+      }
+
+      li {
+        padding: 10px 20px;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  // Profile Tabs Section
+  .quitnet-notes-tabs {
+    padding-top: $section-padding;
+  }
+
+  // Messages
+  .participant-messages {
+    .panel-heading {
+      padding: {
+        bottom: 10px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  // Modal
+  .new_message {
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  .new_note {
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  label[for="note_body"],
+  label[for="message_body"] {
+    display: none;
+  }
+
+  .select-date {
+    select {
+      margin: {
+        left: -3px;
+        right: 2%;
+      }
+      width: 32%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .add-reminder-icon {
+    @include font-size(25px);
+    color: $color-green;
+    margin: 10px 10px 10px 0;
+    vertical-align: middle;
+  }
+}

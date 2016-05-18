@@ -1,0 +1,37 @@
+.Button {
+  @include font-size(16px);
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  height: $height-input;
+  line-height: $height-input;
+  padding: 0 30px;
+  outline: 0;
+  text: {
+    align: center;
+    decoration: none;
+    transform: uppercase;
+  }
+  transition: 0.3s;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+// Colors
+
+.Button--green {
+  background-color: $color-green;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-green, 5%);
+  }
+}
